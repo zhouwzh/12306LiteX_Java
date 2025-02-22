@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/javafx" xmlns="http://javafx.com/fxml"
+            fx:controller="com.wxy.javafxfrontend.LoginController"
+            stylesheets="@style.css">
+
+    <top>
+        <HBox styleClass="headbar">
+            <ImageView fx:id="logoImage" fitHeight="50" fitWidth="195">
+                <Image url="@images/logo.png"/>
+            </ImageView>
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="mainPane" alignment="CENTER">
+            <VBox fx:id="loginPanel" alignment="CENTER" spacing="10" styleClass="login-panel">
+                <Label text="User Login" styleClass="panel-title"/>
+                <TextField fx:id="usernameField" promptText="Username" styleClass="login-input-field"/>
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="login-input-field"/>
+                <Button text="Login" onAction="#onLogin" styleClass="action-button"/>
+                <Hyperlink text="No account yet? Click here to register" onAction="#switchToRegister"/>
+                <Label fx:id="loginWarnText" text=" " styleClass="warn-text"/>
+            </VBox>
+
+            <VBox fx:id="registerPanel" alignment="CENTER" spacing="10" styleClass="register-panel" visible="false" managed="false">
+                <Label text="User Register" styleClass="panel-title"/>
+                <TextField fx:id="registerUsernameField" promptText="Username" styleClass="login-input-field"/>
+                <PasswordField fx:id="registerPasswordField" promptText="Password" styleClass="login-input-field"/>
+                <PasswordField fx:id="registerConfirmPasswordField" promptText="Confirm Password" styleClass="login-input-field"/>
+                <Button text="Register" onAction="#onRegister" styleClass="action-button"/>
+                <Hyperlink text="Back to Login" onAction="#switchToLogin"/>
+                <Label fx:id="registerWarnText" text=" " styleClass="warn-text"/>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>
+

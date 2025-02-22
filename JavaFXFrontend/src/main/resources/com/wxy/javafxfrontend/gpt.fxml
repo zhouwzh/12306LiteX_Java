@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wxy.javafxfrontend.GptController"
+            stylesheets="@style.css"
+            styleClass="root">
+
+    <top>
+        <HBox spacing="10" styleClass="headbar">
+            <Button text="← Back" onAction="#handleBack" styleClass="back-button"/>
+            <Label text="Get Help By Chatting With Our Fine-Tuned LLM" styleClass="headbar-title"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-background-color:transparent;">
+            <VBox fx:id="chatContainer" styleClass="chat-container"/>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-padding:10;" alignment="BOTTOM_CENTER">
+            <TextField fx:id="userInputField" promptText="Type your message..." styleClass="gpt-chat-field" alignment="CENTER"/>
+            <Button text="Send" onAction="#handleSend" styleClass="send-message-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

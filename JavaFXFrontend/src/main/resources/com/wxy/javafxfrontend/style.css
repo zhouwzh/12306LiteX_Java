@@ -1,0 +1,588 @@
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope.ttf');
+}
+
+.root {
+    -fx-background-color: #f5f7fa;
+    -fx-font-family: 'Libre Baskerville';
+}
+
+.headbar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+}
+
+.headbar-title {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e5397;
+}
+
+.headloc {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.login-panel, .register-panel {
+    -fx-padding: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+    -fx-max-width: 400;
+    -fx-max-height: 370;
+    -fx-spacing: 15;
+}
+
+.panel-title {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.login-input-field {
+    -fx-font-family: 'Manrope';
+    -fx-prompt-text-fill: #888;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+
+    -fx-max-width: 300;
+    -fx-max-height: 30;
+}
+
+.login-input-field:focused {
+    -fx-border-color: #000000;
+}
+
+.action-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+    -fx-pref-width: 300;
+    -fx-pref-height: 30;
+}
+
+.action-button:hover {
+    -fx-background-color: #717171;
+}
+
+.action-button-small {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+}
+
+.action-button:hover {
+    -fx-background-color: #717171;
+}
+
+.hyperlink {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-text-fill: #000000;
+}
+
+.warn-text {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 12px;
+    -fx-text-fill: #ff0000;
+}
+
+
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+.sidebar-button {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-background-color: transparent;
+    -fx-text-fill: #ecf0f1;
+    -fx-border-color: transparent;
+    -fx-font-size: 20px;
+    -fx-padding: 10 20 10 20;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 0;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #34495e;
+}
+
+.sidebar-button:pressed {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+}
+
+.search-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+
+    -fx-max-height: 500;
+    -fx-max-width: 700;
+}
+
+.panel-title {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.panel-subtitle {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 17px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #333;
+}
+
+.input-field {
+    -fx-font-family: 'Manrope';
+    -fx-prompt-text-fill: #888;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-background-color: #ffffff;
+
+    -fx-pref-width: 160;
+    -fx-pref-height: 40;
+}
+
+.input-field:focused {
+    -fx-border-color: #000000;
+}
+
+.swap-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-max-height: 10;
+    -fx-max-width: 10;
+}
+
+.swap-button:hover {
+    -fx-background-color: #717171;
+}
+
+.search-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 12;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-min-width: 180;
+    -fx-min-height: 40;
+    -fx-translate-y: 13;
+}
+
+.search-button:hover {
+    -fx-background-color: #717171;
+}
+
+.content-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+
+.black-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-max-width: 100;
+    -fx-alignment: CENTER;
+    -fx-max-height: 30;
+}
+
+.black-button:hover {
+    -fx-background-color: #717171;
+}
+
+.warn-text {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 12px;
+    -fx-text-fill: #ff0000;
+}
+
+.back-button {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-min-width: 50;
+    -fx-alignment: CENTER;
+    -fx-max-height: 30;
+}
+
+.black-button:hover {
+    -fx-background-color: #717171;
+}
+
+ScrollPane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+ScrollPane .viewport {
+    -fx-background-color: transparent;
+}
+
+.route-date-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.date-nav-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.date-nav-button:hover {
+    -fx-background-color: #717171;
+}
+
+.ticket-item {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.ticket-header {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.ticket-subinfo {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+.ticket-expand-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: transparent;
+    -fx-text-fill: #2e5397;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.ticket-expand-button:hover {
+    -fx-text-fill: #000000;
+}
+
+.seat-info-panel {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.seat-type-row {
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+}
+
+.seat-type-label {
+    -fx-font-family: 'Manrope';
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.seat-available-label {
+    -fx-font-family: 'Manrope';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.book-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 12;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.book-button:hover {
+    -fx-background-color: #717171;
+}
+
+.gpt-field {
+    -fx-font-family: "Libre Baskerville";
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 400;
+    -fx-pref-height: 50;
+}
+
+.gpt-button {
+    -fx-font-family: "Libre Baskerville";
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+}
+
+.gpt-chat-field {
+    -fx-font-family: "Libre Baskerville";
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 900;
+    -fx-pref-height: 50;
+}
+
+.order-container {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+.order-item {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+.order-header {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.order-info-label {
+    -fx-font-family: 'Manrope';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.order-price-label {
+    -fx-font-family: 'Manrope';
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.pay-now-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 150;
+    -fx-alignment: CENTER;
+    -fx-max-height: 30;
+}
+
+.pay-now-button:hover {
+    -fx-background-color: #717171;
+}
+
+.chat-container {
+    -fx-spacing: 10;
+    -fx-padding: 20;
+    -fx-background-color: transparent;
+}
+
+.message-box-user {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-spacing: 10;
+}
+
+.message-box-gpt {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10;
+}
+
+.user-message {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Manrope';
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-padding: 10 15;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-max-width: 300;
+}
+
+.gpt-message {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #333333;
+    -fx-font-family: 'Manrope';
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-padding: 10 15;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-max-width: 300;
+}
+
+.send-message-button {
+    -fx-font-family: 'Manrope';
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 12;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-min-width: 180;
+    -fx-min-height: 50;
+}
+
+.payment-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.payment-method-option {
+    -fx-font-family: 'Libre Baskerville';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-cursor: hand;
+}
+
+.payment-method-option:selected {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.success-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+
+    -fx-max-height: 400;
+    -fx-max-width: 1000;
+}
+
+.payment-panel, .search-panel, .content-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.schedule-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+
+
+
+

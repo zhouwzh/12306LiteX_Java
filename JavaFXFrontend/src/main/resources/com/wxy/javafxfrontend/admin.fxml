@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wxy.javafxfrontend.AdminController" stylesheets="@style.css" styleClass="root">
+
+    <top>
+        <HBox spacing="10" styleClass="headbar">
+            <ImageView fx:id="logoImageView" fitWidth="195" fitHeight="50" preserveRatio="true">
+                <Image url="@images/logo.png"/>
+            </ImageView>
+            <Label text="Welcome, Administrator!" styleClass="headbar-title"/>
+            <HBox HBox.hgrow="ALWAYS"></HBox>
+            <Button text="Logout" onAction="#handleLogout" styleClass="action-button-small"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="20" styleClass="sidebar">
+            <Label text="Train Map" onMouseClicked="#showTrainMap" styleClass="sidebar-button"/>
+            <Label text="Train Schedules" onMouseClicked="#showTrainSchedules" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentStack" style="-fx-padding:20;">
+            <ImageView fx:id="trainMapView" fitWidth="1200" fitHeight="950" preserveRatio="true">
+                <Image url="@images/railway.png"/>
+            </ImageView>
+            <ScrollPane fx:id="scheduleScrollPane" fitToWidth="true" fitToHeight="true" visible="false">
+                <VBox fx:id="scheduleContainer" spacing="10" style="-fx-padding:20;">
+                </VBox>
+            </ScrollPane>
+        </StackPane>
+    </center>
+
+</BorderPane>

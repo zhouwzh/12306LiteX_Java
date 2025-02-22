@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wxy.javafxfrontend.BooksuccessController" stylesheets="@style.css" styleClass="root">
+
+    <center>
+        <VBox spacing="20" styleClass="success-panel" alignment="CENTER">
+            <Label fx:id="successLabel" text=" " styleClass="panel-title"/>
+            <Button text="Proceed to Payment" onAction="#gotoPay" styleClass="action-button"/>
+            <Button text="Back to Home" onAction="#backToHome" styleClass="action-button"/>
+        </VBox>
+    </center>
+
+</BorderPane>

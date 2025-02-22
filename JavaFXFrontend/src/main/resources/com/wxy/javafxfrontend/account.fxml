@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wxy.javafxfrontend.AccountController"
+            styleClass="root" stylesheets="@style.css">
+    <top>
+        <HBox spacing="10" styleClass="headbar">
+            <Button text="← Back" onAction="#handleBack" styleClass="back-button"/>
+            <Label text="User Account" styleClass="headbar-title"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="20" styleClass="sidebar">
+            <Label text="User Info" onMouseClicked="#showUserInfo" styleClass="sidebar-button"/>
+            <Label text="Change Password" onMouseClicked="#showChangePassword" styleClass="sidebar-button"/>
+            <Label text="Edit Profile" onMouseClicked="#showEditProfile" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentStack" style="-fx-padding:20;">
+
+            <ScrollPane fx:id="userInfoPane" fitToWidth="true" fitToHeight="true" styleClass="content-panel">
+                <VBox spacing="10">
+                    <Label text="User Information" styleClass="panel-title"/>
+                    <Label fx:id="userNameLabel" text="Username: " styleClass="panel-subtitle"/>
+                    <Label fx:id="infoIncompleteLabel" text="Welcome, please update your information in `Edit Profile Section`." styleClass="panel-subtitle" visible="false"/>
+                    <Label fx:id="fnameLabel" text="First Name: " visible="false" styleClass="panel-subtitle"/>
+                    <Label fx:id="lnameLabel" text="Last Name: " visible="false" styleClass="panel-subtitle"/>
+                    <Label fx:id="birthDateLabel" text="Birth Date: " visible="false" styleClass="panel-subtitle"/>
+                    <Label fx:id="genderLabel" text="Gender: " visible="false" styleClass="panel-subtitle"/>
+                    <Label fx:id="nationalityLabel" text="Nationality: " visible="false" styleClass="panel-subtitle"/>
+                    <Label fx:id="emailLabel" text="Email: " visible="false" styleClass="panel-subtitle"/>
+                    <Label fx:id="phoneLabel" text="Phone: " visible="false" styleClass="panel-subtitle"/>
+                </VBox>
+            </ScrollPane>
+
+            <VBox fx:id="changePasswordPane" spacing="10" visible="false" styleClass="content-panel">
+                <Label text="Change Password" styleClass="panel-title"/>
+
+                <Label text="Old Password:" styleClass="panel-subtitle"/>
+                <PasswordField fx:id="oldPasswordField" promptText="Old Password" styleClass="input-field"/>
+
+                <Label text="New Password:" styleClass="panel-subtitle"/>
+                <PasswordField fx:id="newPasswordField" promptText="New Password" styleClass="input-field"/>
+
+                <Label text="Confirm New Password:" styleClass="panel-subtitle"/>
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm New Password" styleClass="input-field"/>
+
+                <Button text="Submit" onAction="#handleChangePassword" styleClass="black-button"/>
+
+                <Label fx:id="passwordChangeMessage" text="" styleClass="warn-text"/>
+            </VBox>
+
+
+            <ScrollPane fx:id="editProfilePane" fitToWidth="true" fitToHeight="true" visible="false" styleClass="content-panel">
+                <VBox spacing="10">
+                    <Label text="Edit Profile" styleClass="panel-title"/>
+
+                    <Label text="Username:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="usernameField" promptText="Username" editable="false" styleClass="input-field"/>
+
+                    <Label text="First Name:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="fnameField" promptText="First Name" styleClass="input-field"/>
+
+                    <Label text="Last Name:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="lnameField" promptText="Last Name" styleClass="input-field"/>
+
+                    <Label text="Birth Date:" styleClass="panel-subtitle"/>
+                    <DatePicker fx:id="birthDatePicker" styleClass="input-field"/>
+
+                    <Label text="Gender:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="genderField" promptText="Gender" styleClass="input-field"/>
+
+                    <Label text="Nationality:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="nationalityField" promptText="Nationality" styleClass="input-field"/>
+
+                    <Label text="Email:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="emailField" promptText="Email" styleClass="input-field"/>
+
+                    <Label text="Phone:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="phoneField" promptText="Phone" styleClass="input-field"/>
+
+                    <Label text="Type in Password to confirm change of profile:" styleClass="panel-subtitle"/>
+                    <TextField fx:id="passwordConfirmField" promptText="Password" styleClass="input-field"/>
+
+                    <Button text="Save" onAction="#handleSaveProfile" styleClass="black-button"/>
+
+                    <Label fx:id="profileSaveMessage" text="" styleClass="warn-text"/>
+                </VBox>
+            </ScrollPane>
+        </StackPane>
+    </center>
+
+</BorderPane>

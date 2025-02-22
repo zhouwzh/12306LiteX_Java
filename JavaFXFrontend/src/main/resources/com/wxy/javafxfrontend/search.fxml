@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wxy.javafxfrontend.SearchController"
+            xmlns="http://javafx.com/javafx" stylesheets="@style.css">
+
+    <top>
+        <VBox spacing="0">
+            <HBox fx:id="headBar" styleClass="headbar">
+                <Button fx:id="backButton" styleClass="back-button" text="← Back"
+                        onAction="#handleBackButton"/>
+                <Label text="Search Result" styleClass="headbar-title"/>
+            </HBox>
+
+            <HBox styleClass="route-date-bar">
+                <Label fx:id="routeLabel" styleClass="headloc" alignment="CENTER"/>
+            </HBox>
+
+
+            <HBox styleClass="route-date-bar">
+                <HBox spacing="10" alignment="center">
+                    <Button fx:id="prevDayButton" text="Previous Day" styleClass="date-nav-button"
+                            onAction="#handlePrevDay"/>
+                    <Label fx:id="dateLabel" styleClass="panel-subtitle" />
+                    <Button fx:id="nextDayButton" text="Next Day" styleClass="date-nav-button"
+                            onAction="#handleNextDay"/>
+                </HBox>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+            <VBox fx:id="ticketContainer">
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wxy.javafxfrontend.PaymentController" stylesheets="@style.css" styleClass="root">
+
+    <top>
+        <HBox spacing="10" styleClass="headbar">
+            <Button text="← Back" onAction="#handleBack" styleClass="back-button"/>
+            <Label text="Payment" styleClass="headbar-title"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-background-color:transparent;">
+            <VBox spacing="20" styleClass="payment-panel">
+                <!-- 显示订单信息 -->
+                <VBox spacing="10">
+                    <Label fx:id="orderInfoHeader" styleClass="panel-title"/>
+                    <Label fx:id="departArrivalLabel" styleClass="order-info-label"/>
+                    <Label fx:id="timeLabel" styleClass="order-info-label"/>
+                    <Label fx:id="trainNameLabel" styleClass="order-info-label"/>
+                    <Label fx:id="seatLabel" styleClass="order-info-label"/>
+                    <Label fx:id="priceLabel" styleClass="order-price-label"/>
+                </VBox>
+
+                <VBox spacing="10">
+                    <Label text="Select Payment Method:" styleClass="panel-subtitle"/>
+                    <RadioButton fx:id="applePayOption" text="Apple Pay" toggleGroup="$toggleGroup" onAction="#handlePaymentOptionChange" styleClass="payment-method-option">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="50">
+                                <Image url="@images/applepay.png"/>
+                            </ImageView>
+                        </graphic>
+                    </RadioButton>
+                    <RadioButton fx:id="googlePayOption" text="Google Pay" toggleGroup="$toggleGroup" onAction="#handlePaymentOptionChange" styleClass="payment-method-option">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="50">
+                                <Image url="@images/googlepay.png"/>
+                            </ImageView>
+                        </graphic>
+                    </RadioButton>
+                    <RadioButton fx:id="paypalOption" text="PayPal" toggleGroup="$toggleGroup" onAction="#handlePaymentOptionChange" styleClass="payment-method-option">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="50">
+                                <Image url="@images/paypal.png"/>
+                            </ImageView>
+                        </graphic>
+                    </RadioButton>
+                    <RadioButton fx:id="visaOption" text="Visa Debit/Credit Card" toggleGroup="$toggleGroup" onAction="#handlePaymentOptionChange" styleClass="payment-method-option">
+                        <graphic>
+                            <ImageView fitHeight="30" fitWidth="50">
+                                <Image url="@images/visa.png"/>
+                            </ImageView>
+                        </graphic>
+                    </RadioButton>
+                </VBox>
+
+                <VBox fx:id="visaPane" spacing="10" visible="false">
+                    <Label text="VISA Card Information" styleClass="panel-subtitle"/>
+                    <VBox spacing="5">
+                        <Label text="Card Number:" styleClass="panel-subtitle"/>
+                        <TextField fx:id="cardNumberField" promptText="XXXX-XXXX-XXXX-XXXX" styleClass="input-field"/>
+                    </VBox>
+                    <VBox spacing="5">
+                        <Label text="Expiry Date (MM/YY):" styleClass="panel-subtitle"/>
+                        <TextField fx:id="expiryDateField" promptText="MM/YY" styleClass="input-field"/>
+                    </VBox>
+                    <VBox spacing="5">
+                        <Label text="CVV:" styleClass="panel-subtitle"/>
+                        <TextField fx:id="cvvField" promptText="XXX" styleClass="input-field"/>
+                    </VBox>
+                    <VBox spacing="5">
+                        <Label text="Cardholder Name:" styleClass="panel-subtitle"/>
+                        <TextField fx:id="cardHolderNameField" promptText="Name on Card" styleClass="input-field"/>
+                    </VBox>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER">
+                    <Button fx:id="paymentButton" text="Pay" onAction="#handlePay" styleClass="action-button"/>
+                    <Label fx:id="paymentStatusLabel" styleClass="warn-text" text="" visible="false"/>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

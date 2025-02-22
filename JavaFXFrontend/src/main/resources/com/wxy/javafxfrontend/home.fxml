@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.wxy.javafxfrontend.HomeController"
+            stylesheets="@style.css"
+            styleClass="root">
+
+    <top>
+        <HBox styleClass="headbar">
+            <ImageView fx:id="logoImage" fitHeight="50" fitWidth="195">
+                <Image url="@images/logo.png"/>
+            </ImageView>
+            <HBox HBox.hgrow="ALWAYS"></HBox>
+            <Button fx:id="logoutButton" onAction="#logout" text="Logout" styleClass="action-button-small"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox styleClass="sidebar">
+            <Button text="My Account" onAction="#accountClick" styleClass="sidebar-button"/>
+            <Button text="My Orders" onAction="#ordersClick" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox styleClass="search-panel" alignment="CENTER" spacing="20">
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="gptField" promptText="Hi, how can I help you?" styleClass="gpt-field" />
+                <Button fx:id="gptButton" text="🔍" onAction="#gptClick" styleClass="gpt-button" />
+            </HBox>
+
+            <ImageView fitHeight="50" fitWidth="195">
+                <Image url="@images/logo.png"/>
+            </ImageView>
+            <Label text="Search for a Trip" styleClass="panel-title" />
+            <Label text="Departure &amp; Arrival" styleClass="panel-subtitle" />
+
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="departureField" promptText="Departure Location" styleClass="input-field" />
+                <Button fx:id="swapButton" text="⇄" styleClass="swap-button" />
+                <TextField fx:id="arrivalField" promptText="Arrival Location" styleClass="input-field" />
+            </HBox>
+
+            <HBox spacing="30" alignment="CENTER">
+                <VBox spacing="5" alignment="CENTER_LEFT">
+                    <Label text="Departure Date" styleClass="panel-subtitle"/>
+                    <DatePicker fx:id="departureDatePicker" styleClass="input-field"/>
+                </VBox>
+                <Button fx:id="searchButton" onAction="#search" text="Search Now!" styleClass="search-button"/>
+            </HBox>
+
+            <Label fx:id="searchWarnText" styleClass="panel-subtitle" alignment="CENTER"/>
+        </VBox>
+    </center>
+
+
+    <padding>
+        <Insets top="0" right="0" bottom="0" left="0"/>
+    </padding>
+</BorderPane>
